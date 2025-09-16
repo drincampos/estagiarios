@@ -13,7 +13,6 @@ NIVEL_ACADEMICO = {
     "SP": "Superior",
 }
 
-
 class UnidadesCLDF(models.Model):
 
     nome_unidade = models.CharField('Unidade', max_length=100, null=False, blank=False)
@@ -44,7 +43,7 @@ class Estagiario(models.Model):
     unidade_cldf = models.ForeignKey(UnidadesCLDF, on_delete=models.SET_NULL, null=True)
     matricula = models.IntegerField('Matrícula', null=False, blank=False)
     data_inicio = models.DateField('Data início', )
-    
+    duracao_estagio = models.IntegerField('Duração (em meses)', default=6)
 
     class Meta:
         verbose_name = "Estagiário"
