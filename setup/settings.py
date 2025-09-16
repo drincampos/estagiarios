@@ -121,7 +121,6 @@ DATETIME_FORMAT = "d/m/Y H:i"
 STATIC_URL = 'static/'
 STATICFILES_DIR = [
     os.path.join(BASE_DIR, 'setup/static'),
-    os.path.join(BASE_DIR, 'estagiarios/static')
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
